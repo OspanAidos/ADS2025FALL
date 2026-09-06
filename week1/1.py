@@ -1,6 +1,8 @@
 import sys
 import math
-input = sys.stdin.readline()
-if input:
-    a, b = map(int, input.split())
-    print(math.gcd(a, b))
+def gcd_f(a,b):
+    while b:
+        a, b = b, a%b
+    return a
+n,m = map(int, sys.stdin.readline().split())
+print(gcd_f(n,m))
