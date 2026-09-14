@@ -1,14 +1,16 @@
-import math
 import sys
-def prime_factors(n):
-    factors = []; i=2
-    while i*i<=n:
-        while n%i==0:
-            factors.append(i)
+
+def pr_f(n):
+    i = 2
+    a = []
+    while i*i <= n:
+        while n%i == 0:
+            a.append(i)
             n//=i
-        i+=1
-    if n>1:
-        factors.append(n)
-    return factors
-n = int(sys.stdin.readline())
-print(*prime_factors(n))
+        i += 1
+    if n > 1:
+        a.append(n)
+    return a
+
+b = int(sys.stdin.readline())
+print(pr_f(b))

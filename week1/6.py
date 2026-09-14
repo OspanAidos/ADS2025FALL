@@ -1,20 +1,15 @@
-import math
 import sys
-def main(s):
-    stack = []
-    for i in s:
+def fequal(n):
+    a = []
+    for i in n:
         if i != '#':
-            stack.append(i)
-        elif stack:
-            stack.pop()
-    return stack
-str1 = sys.stdin.readline().strip()
-str2 = sys.stdin.readline().strip()
-if main(str1) == main(str2):
-    print('Yes')
+            a.append(i)
+        elif a:
+            a.pop()
+    return a
+a = sys.stdin.readline().strip()
+b = sys.stdin.readline().strip()
+if fequal(a) == fequal(b):
+    print("Yes")
 else:
-    print('No')
-
-            
-
-    
+    print("No")

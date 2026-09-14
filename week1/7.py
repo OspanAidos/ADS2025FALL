@@ -1,19 +1,15 @@
 import sys
-def age_d(ages):
-    stack = []; result = []
-    for age in ages:
-        while stack and stack[-1] >= age:
-            stack.pop()
-        if not stack:
-            result.append("-1")
+def gb(s):
+    s = list(s)
+    a = []
+    for i in s:
+        if a and a[-1] == i:
+            a.pop()
         else:
-            result.append(str(stack[-1]))
-        stack.append(age)
-    return result
-n=int(sys.stdin.readline())
-g=[]
-g=list(map(int, sys.stdin.readline().split()))
-print(*age_d(g))
+            a.append(i)
+    return not a
+n = sys.stdin.readline().strip()
+print("YES") if gb(n) else print("NO")
 '''
 ages = [2,1,5,8,3]; stack = []; result = []
 age = 2; stack = [2]; result = [-1]
