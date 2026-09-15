@@ -154,4 +154,3 @@ n = int(sys.stdin.readline())
 s = map(int, sys.stdin.readline().split())
 print(hns(s))
 """
-print(0%5)
