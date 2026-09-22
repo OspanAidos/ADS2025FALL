@@ -20,7 +20,6 @@ def pl(head):
         current = current.next
     print("".join(result))
 def cdb(head):
-    result = []
     if not head:
         return None
     current = head

@@ -35,8 +35,8 @@ def rot(head, k):
         tail = tail.next
     tail.next = head
     return new_head
-n, k = map(int, sys.stdin.readline().split())
-line = list(map(str, sys.stdin.readline().split()))
-head = bl(line)
-head = rot(head, k)
+a, b = map(int, sys.stdin.readline().split())
+words = list(map(str, sys.stdin.readline().split()))
+head = bl(words)
+head = rot(head, b)
 pl(head)
